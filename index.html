@@ -1,18 +1,52 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Primary SEO -->
+    <title>María Gentil — Graphic Designer & Front-End Developer UX/UI</title>
+    <meta name="description"
+        content="Portfolio of María Gentil, graphic designer and front-end UX/UI developer. Branding, editorial design, web development and creative direction projects.">
+    <meta name="keywords"
+        content="María Gentil, graphic design, UX/UI, front-end developer, branding, editorial, portfolio, web design">
+    <meta name="author" content="María Gentil">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://mariagentil.es/">
+
+    <!-- Open Graph / Social sharing -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://mariagentil.es/">
+    <meta property="og:title" content="María Gentil — Graphic Designer & Front-End Developer UX/UI">
+    <meta property="og:description"
+        content="Portfolio of María Gentil, graphic designer and front-end UX/UI developer. Branding, editorial design and web development.">
+    <meta property="og:image" content="https://mariagentil.es/assets/img/og-image.jpg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="es_ES">
+    <meta property="og:site_name" content="María Gentil">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="María Gentil — Graphic Designer & Front-End Developer UX/UI">
+    <meta name="twitter:description"
+        content="Portfolio of María Gentil, graphic designer and front-end UX/UI developer.">
+    <meta name="twitter:image" content="https://mariagentil.es/assets/img/og-image.jpg">
+
+    <!-- Hreflang for bilingual -->
+    <link rel="alternate" hreflang="en" href="https://mariagentil.com/">
+    <link rel="alternate" hreflang="es" href="https://mariagentil.com/es/">
+
     <link rel="stylesheet" href="style.css">
-    <title>Portfolio María Gentil</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
-    <link rel="icon" type="image/svg" href="assets/icons/favicon.svg">
-    <script src="script.js"></script>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
+    <script src="script.js" defer></script>
 </head>
 
 <body class="body_home">
@@ -20,7 +54,7 @@
         <div class="header-index">
             <h1>
                 <a href="index.html">
-                <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.09 100.92">
+                    <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.09 100.92">
                         <defs>
                             <style>
                                 .cls-1 {
@@ -51,24 +85,24 @@
                     </svg>
                 </a>
             </h1>
-        <!-- Botón hamburguesa: solo en móvil -->
-        <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-            <span></span>
-            <span></span>
-            <span></span>
-        </button>
-        
-        <!-- Nav desktop: sin tocar -->
-        <nav class="header__content">
-            <ul class="header__list">
-                <li><a href="projects/index.html" class="header__list_item">Projects</a></li>
-                <li><a href="about/index.html" class="header__list_item">About</a></li>
-                <li><a href="contact/index.html" class="header__list_item">Contact</a></li>
-            </ul>
-        </nav>
+
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+
+            <nav class="header__content">
+                <ul class="header__list">
+                    <li><a href="projects/index.html" class="header__list_item">Projects</a></li>
+                    <li><a href="about/index.html" class="header__list_item">About</a></li>
+                    <li><a href="contact/index.html" class="header__list_item">Contact</a></li>
+                </ul>
+            </nav>
         </div>
-        
-        <!-- Overlay móvil: fuera del header-index pero dentro del header -->
+
+
         <nav class="nav-overlay" id="navOverlay">
             <ul class="nav-overlay__list">
                 <li><a href="projects/index.html" class="nav-overlay__item">Projects</a></li>
@@ -78,117 +112,186 @@
         </nav>
     </header>
 
-    <main>
-        <!-- doy dos clases, una para los estilos globales (la comparten ambas img) y una individual para hacer mediaquery  -->
+    <main id="main-content" aria-label="Portfolio home">
+
         <!-- <img src="assets/img/img-home.webp" alt="Imagen portada" class="imagen-portada img-desktop">
         <img src="assets/img/img-home-responsive.webp" alt="Imagen portada" class="imagen-portada img-mobile"> -->
-        
-    <div class="slideshow-wrapper">
-    
-        <!-- ── GRUPO MÓVIL (vertical, 33 imágenes) ──────────────── -->
-        <div class="slideshow-group slideshow-group--mobile">
-            <img src="assets/img/img-mobile-home/1.webp" alt="" class="slideshow__img" loading="eager" decoding="async">
-            <img src="assets/img/img-mobile-home/2.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/3.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/4.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/5.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/6.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/7.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/8.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/9.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/10.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/11.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/12.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/13.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/14.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/15.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/16.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/17.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/18.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/19.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/20.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/21.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/22.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/23.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/24.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/25.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/26.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/27.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/28.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/29.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/30.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/31.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/32.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-            <img src="assets/img/img-mobile-home/33.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        </div>
-    
-        <!-- ── GRUPO DESKTOP (horizontal, 35 imágenes) ──────────── -->
-    <div class="slideshow-group slideshow-group--desktop">
-        <img src="assets/img/img-desktop-home/img-1.webp" alt="" class="slideshow__img" loading="eager" decoding="async">
-        <img src="assets/img/img-desktop-home/img-2.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-3.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-4.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-5.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-6.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-7.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-8.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-9.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-10.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-11.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-12.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-13.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-14.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-15.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-16.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-17.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-18.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-19.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-20.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-21.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-22.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-23.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-24.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-25.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-26.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-27.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-28.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-29.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-30.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-31.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-32.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-33.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-34.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-        <img src="assets/img/img-desktop-home/img-35.webp" alt="" class="slideshow__img" loading="lazy" decoding="async">
-    </div>
-    
-    </div>
+
+        <section class="slideshow-wrapper" aria-label="Portfolio slideshow">
+
+
+            <div class="slideshow-group slideshow-group--mobile">
+                <img src="assets/img/img-mobile-home/1.webp" alt="" class="slideshow__img" loading="eager"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/2.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/3.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/4.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/5.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/6.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/7.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/8.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/9.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/10.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/11.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/12.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/13.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/14.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/15.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/16.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/17.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/18.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/19.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/20.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/21.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/22.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/23.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/24.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/25.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/26.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/27.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/28.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/29.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/30.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/31.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/32.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-mobile-home/33.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+            </div>
+
+
+            <div class="slideshow-group slideshow-group--desktop">
+                <img src="assets/img/img-desktop-home/img-1.webp" alt="" class="slideshow__img" loading="eager"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-2.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-3.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-4.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-5.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-6.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-7.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-8.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-9.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-10.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-11.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-12.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-13.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-14.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-15.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-16.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-17.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-18.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-19.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-20.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-21.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-22.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-23.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-24.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-25.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-26.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-27.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-28.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-29.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-30.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-31.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-32.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-33.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-34.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+                <img src="assets/img/img-desktop-home/img-35.webp" alt="" class="slideshow__img" loading="lazy"
+                    decoding="async">
+            </div>
+
+        </section>
     </main>
 
-    
 
-    <footer>
-        <div class="footer__email">
-            <a href="mailto:maria.gentil.bueno@gmail.com">
-                <span>Say hi!</span>
-            </a>
+
+    <footer role="contentinfo">
+        <div>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-toggle__label" id="langLabel">ES</span>
+            </button>
         </div>
-
         <div class="footer__text">
             <p>Concept thinker.<br> Creative maker.</p>
-            <p class="footer__text_copy">&copy María Gentil 2026</p>
+            <p class="footer__text_copy">&copy; María Gentil 2026</p>
         </div>
-
-        <div class="footer__icons">
-            <a href="https://www.linkedin.com/in/mariagentil/" target="_blank" rel="noopener noreferrer">
-                <img src="assets/icons/icon-linkedin.svg" alt="Icono Linkedin" class="footer__icons">
-            </a>
-
-            <a href="https://www.instagram.com/bymerygentil?igsh=NXA0N252anNlNWxo&utm_source=qr" target="_blank" rel="noopener noreferrer">
-                <img src="assets/icons/icon-instagram.svg" alt="Icono instagram" class="footer__icons">
-            </a>
-
+        <div class="footer__right">
+            <div class="footer__icons">
+                <a href="https://www.linkedin.com/in/mariagentil/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <img src="/assets/icons/icon-linkedin.svg" alt="LinkedIn" class="footer__icon-img">
+                </a>
+                <a href="https://www.instagram.com/bymerygentil?igsh=NXA0N252anNlNWxo&utm_source=qr" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="/assets/icons/icon-instagram.svg" alt="Instagram" class="footer__icon-img">
+                </a>
+            </div>
         </div>
     </footer>
+
 </body>
 
 </html>

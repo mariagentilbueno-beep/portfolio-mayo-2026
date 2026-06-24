@@ -1,20 +1,22 @@
 :root {
-    /* font-family: Noto, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;  */
+
     --clr-text: hsl(0, 0%, 0%);
     --clr-bg: hsl(0, 0%, 100%);
     --clr-text-details: hsl(0, 0%, 50%);
     --clr-bg-new: hsl(199, 47%, 62%);
-    /* para que todos los navegadores puedan tener la fuente, metes el embed code de google fonts en <head> */
+    --clr-corporativo-yellow: hsl(55, 88%, 84%);
+    --clr-corporativo-purple: hsl(328, 73%, 23%);
+
     --text-font: "Inter", sans-serif;
     --text-size-footer: clamp(0.875rem, 0.7386rem+0.6818vw, 1.25rem);
     --text-size-header: clamp(0.9rem, 0.8rem + 2vw, 1rem);
     --padding-inline: clamp(1rem, -0.1429rem + 5.7143vw, 5rem);
     --text-font-text: system-ui, -apple-system,
-        BlinkMacSystemFont, 'Segoe UI', Roboto,Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     --padding-left: 6vw;
 }
 
-/* utility classes */
+
 .strong {
     font-family: var(--text-font);
     font-weight: bold;
@@ -49,6 +51,10 @@
     background-color: #FDFAE5
 }
 
+.bg-color-yellow-emes {
+    background-color: #F9F3B1
+}
+
 .bg-color-white {
     background-color: #fffffe
 }
@@ -65,24 +71,39 @@
     color: white;
 }
 
-/* utility classes */
+.padding-bottom {
+    padding-bottom: 1rem;
+}
+
+.grid {
+    display: grid;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
 
 
 * {
-    /* problema del modelo de caja css, que suma el borde de los elementos; para que no te sume el ancho de los elementos incluidos el padding y el border */
+
     box-sizing: border-box;
 }
 
 body {
     margin: 0;
     padding: 0;
-    /* para que sea la altura del viewport */
+
     min-height: 100vh;
     display: grid;
-    /* para distribuir el espacio que ocupará header-main-footer , lo dejo como comentario porque ha sido uno de mis primeros errores y no quiero que se me olvide: el error estaba en que había muchísimo espacio en blanco y el resto del contenido estaba al final de la página; las fr reparten el espacio disponible, le estaba diciendo 200 veces el espacio de main a header... gafes del oficio*/
+
     grid-template-rows: auto 1fr auto;
     font-family: var(--text-font);
-    /* para que al hacer scroll lateral en la página de proyectos el contenido no se desborde */
+
     overflow-x: hidden;
     background-color: white;
 }
@@ -111,7 +132,7 @@ a:hover {
     transform: 0.3 ease;
 }
 
-/* HEADER */
+
 
 header {
     position: fixed;
@@ -128,7 +149,7 @@ header {
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-        mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
 }
 
 .header-index {
@@ -146,12 +167,12 @@ header {
     display: block;
 }
 
-/* Nav desktop: oculta en móvil */
+
 .header__content {
     display: none;
 }
 
-/* BOTÓN HAMBURGUESA */
+
 .nav-toggle {
     display: flex;
     flex-direction: column;
@@ -183,7 +204,7 @@ header {
     transform: translateY(-8px) rotate(-45deg);
 }
 
-/* OVERLAY MÓVIL */
+
 .nav-overlay {
     position: fixed;
     top: 0;
@@ -205,7 +226,7 @@ header {
 .nav-overlay__item,
 .nav-overlay__list * {
     background-color: transparent !important;
-    /* Evita los parches blancos en los textos */
+
 }
 
 .nav-overlay.is-open {
@@ -241,13 +262,13 @@ header {
 
 .nav-overlay__item:hover {
     opacity: 0.5;
-        /* En lugar de un subrayado brusco, una sutil atenuación */
-        text-decoration: none;
+
+    text-decoration: none;
 }
 
-/* header */
 
-/* FOOTER */
+
+
 
 footer {
     display: flex;
@@ -258,7 +279,7 @@ footer {
     background-color: rgb(255, 255, 255);
     color: rgb(0, 0, 0);
 
-    /* quiero que cada uno de los elementos esté centrado dentro de su contenedor */
+
     footer div {
         justify-content: center;
         color: white;
@@ -268,7 +289,7 @@ footer {
         height: 30px;
     }
 
-    /* para centrar la justificación del texto del footer */
+
     .footer__text {
         text-align: center;
         margin: 0;
@@ -294,14 +315,14 @@ footer a {
 
 
 .imagen-portada {
-    /* Para que no se salga de la pantalla */
+
     max-width: 100%;
     height: auto;
-    /* puse flex al principio pensando  que el siguiente elemento se pusiera abajo , pero vi el fallo y lo corregí*/
+
     display: block;
 }
 
-/* este es el breakpoint para mostrar img responsive, he decidido diseñar con mobile first, por lo que lo primero que se aplica será para móvil y después la condición para desktop */
+
 .img-desktop {
     display: none;
 }
@@ -310,19 +331,19 @@ footer a {
     display: block;
 }
 
-/* HOME */
-/* ----- CONTENEDOR ----- */
+
+
 .slideshow-wrapper {
     width: 100vw;
     height: 100vh;
-    /* llena el 1fr que le da el grid del body */
+
     position: relative;
     background-color: #ffffff;
     overflow: hidden;
 }
 
 
-/* Cada grupo de imágenes ocupa todo el contenedor */
+
 .slideshow-group {
     position: absolute;
     inset: 0;
@@ -330,7 +351,7 @@ footer a {
     height: 100%;
 }
 
-/* Por defecto mostramos el grupo móvil, ocultamos el desktop */
+
 .slideshow-group--mobile {
     display: block;
 }
@@ -341,67 +362,61 @@ footer a {
 
 body.body_home .slideshow-wrapper {
     height: calc(100vh - 60px);
-    /* ajusta 60px al alto real de tu header */
+
     margin-top: 60px;
 }
 
 
-/* ----- CADA IMAGEN ----- */
+
 .slideshow-group--mobile .slideshow__img {
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
-    /* se ve completa, sin recortar */
+
     opacity: 0;
-    animation: fadeInOnlyMobile var(--cycle-duration) linear infinite;;
-    /* step-start hace el cambio instantáneo, sin interpolación */
+    animation: fadeInOnlyMobile var(--cycle-duration) linear infinite;
+    ;
+
 }
 
 
-/* ----- KEYFRAMES: CORTE LIMPIO -----
-   Con step-start el navegador salta de golpe entre estados.
-   Solo necesitamos marcar cuándo empieza y cuándo termina
-   la ventana visible de cada imagen dentro del ciclo.
 
-   MOBILE: ciclo = 33s → cada imagen ocupa 1/33 ≈ 3.0303%
-   DESKTOP: ciclo = 35s → cada imagen ocupa 1/35 ≈ 2.8571%
-*/
 
-/* MOBILE (ciclo 33s) */
+
 @keyframes fadeInOnlyMobile {
     0% {
-            opacity: 0;
-        }
-    
-        0.5% {
-            opacity: 1;
-        }
-    
-        /* Fade-in inicial */
-        3.5303% {
-            opacity: 1;
-        }
-    
-        /* Se mantiene viva mientras la siguiente aparece */
-        3.5304% {
-            opacity: 0;
-        }
-    
-        /* CORTE INVISIBLE: Se apaga de golpe por detrás */
-        100% {
-            opacity: 0;
-        }
+        opacity: 0;
+    }
+
+    0.5% {
+        opacity: 1;
+    }
+
+
+    3.5303% {
+        opacity: 1;
+    }
+
+
+    3.5304% {
+        opacity: 0;
+    }
+
+
+    100% {
+        opacity: 0;
+    }
 }
 
-/* Variable de ciclo por defecto: móvil */
+
 :root {
     --cycle-duration: 16.5s;
 }
 
 
-/* ----- DELAYS — MOBILE (33 imágenes) ----- */
+
 .slideshow-group--mobile .slideshow__img:nth-child(1) {
     animation-delay: 0s;
 }
@@ -533,13 +548,13 @@ body.body_home .slideshow-wrapper {
 .slideshow-group--mobile .slideshow__img:nth-child(33) {
     animation-delay: 16s;
 }
-/* Home */
 
-/* ABOUT */
+
+
 
 .about__section {
     display: grid;
-    /* en móvil 1 columna y en desktop 2 */
+
     grid-template-columns: 1fr;
     gap: 2rem;
     align-items: center;
@@ -550,17 +565,17 @@ body.body_home .slideshow-wrapper {
     }
 }
 
-/* hay que definir la altura para permitir que el contenido se centre verticalmente */
+
 .about__distribution {
     display: flex;
 
-    /* Centra verticalmente */
+
     align-items: center;
 
-    /* Centra horizontalmente */
+
     justify-content: center;
 
-    /* Ocupa todo el alto que le da el main */
+
     height: 100%;
 
     width: 100%;
@@ -590,8 +605,8 @@ body.body_home .slideshow-wrapper {
 
 }
 
-/* PROJECTS */
-/* Lo siguiente es para la página de proyectos, para presentar cada uno con scroll lateral */
+
+
 .main__projects {
     width: 100%;
     height: auto;
@@ -599,13 +614,13 @@ body.body_home .slideshow-wrapper {
 
 .sticky-container {
     position: relative;
-    /* No es sticky en móvil */
+
     display: block;
 }
 
 .projects-track {
     display: flex;
-    /* para apilarlas en móvil en columna */
+
     flex-direction: column;
     gap: 2rem;
     padding: 9rem var(--padding-inline);
@@ -613,12 +628,12 @@ body.body_home .slideshow-wrapper {
     flex-wrap: nonrap;
 }
 
-/* tarjeta de cada img */
+
 .project-card {
     display: flex;
     flex-direction: column;
     position: relative;
-    /* con esto evitas que se encojan para caber en la pantalla */
+
     flex-shrink: 0;
     width: 100%;
     max-width: 250px;
@@ -630,29 +645,29 @@ body.body_home .slideshow-wrapper {
     text-decoration: none;
 }
 
-/* características de cada imagen */
+
 .project-card img {
-    /* con esto consigues que ocupen el 100% del ancho de la card */
+
     width: 100%;
     object-fit: cover;
-    /* transición al aplicar cualquier cambio */
+
     transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
     display: block;
 }
 
-/* efecto hover */
+
 .project-card:hover img {
-    /* con scale 1.06 agrandas el elemento un 6% más de su tamaño normal (que es =1), con overflow:hidden en la card recortas lo que se salga, para que el zoom ocurra hacia dentro sin romper el layout*/
+
     transform: scale(1.04);
     text-decoration: none;
 }
 
 .project-disc {
-    /* desactivamos el disco en móvil para que no ocupe espacio en blanco vacío */
+
     display: none;
 }
 
-/* etiqueta de cada proyecto */
+
 .project-info {
     padding: 1rem 0;
     text-align: left;
@@ -674,13 +689,13 @@ body.body_home .slideshow-wrapper {
     display: block;
 }
 
-    /* animacion carrusel */
+
 body.body_projects {
     overflow-y: auto;
     height: auto;
 }
 
-    /* PROJECTS - PAGES */
+
 .projects__section {
     display: grid;
     grid-template-columns: 1fr;
@@ -689,10 +704,11 @@ body.body_projects {
     padding: 1rem var(--padding-inline);
     align-items: center;
 }
+
 .projects__section_youtube {
     width: 100%;
     position: relative;
-    /* para mantener la relación 16:9 */
+
     padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
@@ -711,7 +727,7 @@ body.body_projects {
     font-family: var(--text-font-text);
 }
 
-    /* PROJECTS - PAGES - GALERÍA */
+
 .editorial {
     background-color: var(--clr-bg);
 }
@@ -735,7 +751,7 @@ body.body_projects {
 }
 
 
-/* estilos base */
+
 .editorial__intro {
     padding: 4rem var(--padding-inline);
     min-height: 60vh;
@@ -745,7 +761,7 @@ body.body_projects {
 }
 
 
-/* Bloom */
+
 .hero_container {
     position: fixed;
     top: var(--header-height, 80px);
@@ -769,7 +785,7 @@ body.body_projects {
     z-index: 1;
     background-color: white;
     margin-top: calc(100vh - var(--header-height, 80px));
-    /* Debe coincidir con el height del hero */
+
     box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -788,11 +804,11 @@ body.body_projects {
     justify-content: space-between;
 }
 
-.project-content-wrapper__info ul{
+.project-content-wrapper__info ul {
     display: flex;
     flex-direction: column;
-   padding-left: 0;
-   gap: 0.5vh;
+    padding-left: 0;
+    gap: 0.5vh;
 }
 
 .project-content-wrapper__logo {
@@ -800,7 +816,7 @@ body.body_projects {
     top: 0;
     max-height: 400px;
     display: flex;
-   justify-content: center;
+    justify-content: center;
 }
 
 .project-content-wrapper__logo img {
@@ -817,7 +833,7 @@ body.body_projects {
     justify-items: center;
 }
 
-.project-content-wrapper__grid-img img{
+.project-content-wrapper__grid-img img {
     width: 100%;
     object-fit: contain;
 }
@@ -868,12 +884,12 @@ body.body_projects {
     margin: 5vh;
 }
 
-/* Panar */
+
 .project-content-wrapper__logo_panar {
-        top: 0;
-        max-height: 400px;
-        display: flex;
-        justify-content: center;
+    top: 0;
+    max-height: 400px;
+    display: flex;
+    justify-content: center;
 }
 
 .project-content-wrapper_video {
@@ -892,7 +908,7 @@ body.body_projects {
 .desktop-photos-row-panar {
     display: flex;
     flex-direction: column;
-    /* Apilado vertical: bloque1 -> vídeo -> bloque2 */
+
     width: 100%;
     gap: 2.5rem;
     padding: 2rem var(--padding-inline, 1rem);
@@ -904,7 +920,7 @@ body.body_projects {
 .project-content-wrapper__grid-img-panar {
     display: flex;
     flex-direction: row;
-    /* "A dos columnas" en móvil */
+
     width: 100%;
     justify-content: center;
     padding: var(--padding-inline);
@@ -915,7 +931,7 @@ body.body_projects {
 .project-content-wrapper__grid-img-panar img {
     width: 70%;
     max-width: 400px;
-    /* Evita que crezcan demasiado en pantallas medianas */
+
     object-fit: contain;
 }
 
@@ -938,7 +954,7 @@ body.body_projects {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
-    padding: 0 var(--padding-inline);
+    /* padding: 0 var(--padding-inline); */
 }
 
 .project-content-wrapper_video_desktop video {
@@ -947,7 +963,7 @@ body.body_projects {
     justify-content: center;
 }
 
-    /* animaciones de los personajes */
+
 
 @keyframes floatUp {
     0% {
@@ -958,7 +974,7 @@ body.body_projects {
         transform: translateY(-12px);
     }
 
-    /* Sube sutilmente */
+
     100% {
         transform: translateY(0px);
     }
@@ -973,58 +989,58 @@ body.body_projects {
         transform: translateY(12px);
     }
 
-    /* Baja sutilmente */
+
     100% {
         transform: translateY(0px);
     }
 }
 
-/* Aplicamos las animaciones de forma alterna para que parezca que bailan */
+
 .project-content-wrapper__grid-img-panar img:nth-child(1) {
     animation: floatUp 2s ease-in-out infinite;
 }
 
 .project-content-wrapper__grid-img-panar img:nth-child(2) {
     animation: floatDown 2s ease-in-out infinite;
-    /* Descompasado aposta para mayor naturalidad */
+
 }
 
 
-/* intento de animacion js */
 
-/* 1. Estado inicial de las imágenes (ocultas y abajo) */
+
+
 .reveal-img {
     opacity: 0;
     transform: translateY(40px);
-    /* Empieza 40px más abajo */
+
     transition: opacity 0.8s cubic-bezier(0.25, 1, 0.5, 1),
         transform 0.8s cubic-bezier(0.25, 1, 0.5, 1);
     will-change: transform, opacity;
 }
 
-/* 2. Estado activo (cuando JS añade la clase) */
+
 .reveal-img.is-visible {
     opacity: 1;
     transform: translateY(0);
-    /* Sube a su posición original */
+
 }
 
-/* 3. Transición fluida entre páginas (View Transitions API) */
+
 @view-transition {
     navigation: auto;
-    /* Activa la transición nativa entre páginas del mismo sitio */
+
 }
 
 
 
 
-/* Panar */
 
-/* Simof */
+
+
 
 .hero_container-simof {
     position: fixed;
-    /* top: var(--header-height, 80px); */
+
     left: 0;
     top: 0;
     width: 100%;
@@ -1037,35 +1053,35 @@ header.menu-simof .nav-toggle span {
     background-color: white;
 }
 
-/* he cambiado por estética el color de los elementos del menu, pero al hacer scroll se mezcla con el blur, con las siguientes clases devuelvo los elementos a su color original */
 
-/* Cuando el header tiene scroll, cambiamos el texto blanco a negro (o tu color oscuro) */
+
+
 .header--scrolled .header__list_item.color-text-white {
     color: var(--clr-text);
-    /* Pon aquí el color original oscuro de tu diseño */
+
 }
 
-/* IMPORTANTE: Cambiamos también el color del logo SVG para que no desaparezca */
+
 .header--scrolled svg .cls-1 {
     fill: var(--clr-text);
-    /* Mismo color oscuro para el logotipo */
+
     transition: fill 0.3s ease;
-    /* Transición suave para el logo */
+
 }
 
-/* Opcional: Si el botón hamburguesa móvil también es blanco, lo cambiamos aquí */
+
 header.menu-simof.header--scrolled .nav-toggle span {
     background-color: var(--clr-text);
-    /* Pon aquí el color original oscuro de tu menú */
+
 }
 
-/* Cuando el botón hamburguesa está activo (menú abierto), forzamos el color oscuro */
+
 header.menu-simof .nav-toggle.is-active span {
     background-color: var(--clr-text);
-    /* Reemplaza por tu color oscuro o negro */
+
 }
 
-/* Añade una transición suave a tus enlaces para que el cambio de color no sea brusco */
+
 .header__list_item {
     transition: color 0.3s ease;
 }
@@ -1085,12 +1101,57 @@ header.menu-simof .nav-toggle.is-active span {
     width: 100%;
     box-sizing: border-box;
 }
+
 .photo-centered {
     display: block;
     width: 100%;
     max-width: 600px;
     height: 100%;
     object-fit: cover;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    align-self: center;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    padding: clamp(10px, 1.3vw, 15px) clamp(40px, 4.2vw, 60px);
+    border-radius: 42px;
+    background: var(--clr-corporativo-purple);
+    color: var(--clr-corporativo-yellow);
+    font-family: var(--text-font);
+    font-size: clamp(0.8rem, 1vw, 1rem);
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: background 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+    z-index: 1;
+    text-align: center;
+    line-height: 1;
+}
+
+/* Wrapper para centrar el botón en página de proyecto */
+.btn-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 2rem var(--padding-inline);
+    box-sizing: border-box;
+}
+
+@media (hover: hover) {
+    .btn:hover {
+        background: var(--clr-corporativo-yellow);
+        color: var(--clr-corporativo-purple);
+        border-color: var(--clr-corporativo-purple);
+    }
+}
+
+.a-emes:hover {
+    text-decoration: none;
 }
 
 
@@ -1101,9 +1162,8 @@ header.menu-simof .nav-toggle.is-active span {
 
 
 
-/* Simof */
 
-/* MEDIA QUERY */
+
 
 @media (min-width: 768px) {
 
@@ -1114,8 +1174,8 @@ header.menu-simof .nav-toggle.is-active span {
     .img-mobile {
         display: none;
     }
-    /* HEADER */
-    
+
+
     header {
         position: fixed;
         top: 0;
@@ -1126,322 +1186,319 @@ header.menu-simof .nav-toggle.is-active span {
 
 
 
-          .header__content {
-              display: block;
-              position: static;
-              width: auto;
-              height: auto;
-              background-color: transparent;
-              padding: 0;
-          }
-    
-          .header__list {
-            display: flex;
-            flex-direction: row;
-            gap: 2rem;
-            text-decoration: none
-          }
+    .header__content {
+        display: block;
+        position: static;
+        width: auto;
+        height: auto;
+        background-color: transparent;
+        padding: 0;
+    }
 
-          ul {
-            list-style: none;
-          }
+    .header__list {
+        display: flex;
+        flex-direction: row;
+        gap: 2rem;
+        text-decoration: none
+    }
 
-          a {
-            color: black;
-          }
+    ul {
+        list-style: none;
+    }
 
-        header a:hover {
-            opacity: 0.6;
-                /* En lugar de un subrayado brusco, una sutil atenuación */
-                text-decoration: none;
-          }
-    
-          .header__list_item {
-              font-size: var(--text-size-header);
-              text-decoration: none;
-          }
-    
-          .nav-toggle {
-              display: none;
-          }
-    
-          .nav-overlay {
-              display: none;
-          }
-/* home */
-         :root {
-             --cycle-duration: 17.5s;
-         }
+    a {
+        color: black;
+    }
 
-                 /* HOME desktop: footer fijo en la parte inferior */
-                 body.body_home footer {
-                     position: fixed;
-                     bottom: 0;
-                     left: 0;
-                     width: 100%;
-                     z-index: 100;
-                     background-color: rgba(255, 255, 255, 0.85);
-                     backdrop-filter: blur(6px);
-                     -webkit-backdrop-filter: blur(6px);
-                 }
-        
-                 /* Evita que el footer fijo tape el contenido del slideshow */
-                 body.body_home main {
-                     padding-bottom: 80px;
-                 }
-        
-                   body.body_home .slideshow-wrapper {
-                       height: calc(100vh - 60px - 80px);
-                       /* header + footer */
-                       margin-top: 60px;
-                   }
-    
-         /* Intercambiamos qué grupo se muestra */
-         .slideshow-group--mobile {
-             display: none;
-         }
-    
-         .slideshow-group--desktop {
-             display: block;
-         }
+    header a:hover {
+        opacity: 0.6;
 
-                 .slideshow-group--desktop .slideshow__img {
-                     position: absolute;
-                     inset: 0;
-                     width: 100%;
-                     height: 100%;
-                     object-fit: contain;
-                     /* se ve completa, sin recortar */
-                     opacity: 0;
-                     /* step-start hace el cambio instantáneo, sin interpolación */
-                    animation: fadeInOnlyDesktop var(--cycle-duration) linear infinite;
-                 }
-    
-    
-         /* Keyframes para ciclo de 35s: 1s/35s ≈ 2.8572% */
-         @keyframes fadeInOnlyDesktop {
-            0% {
-                    opacity: 0;
-                }
-            
-                0.5% {
-                    opacity: 1;
-                }
-            
-                /* Fade-in inicial */
-                3.3571% {
-                    opacity: 1;
-                }
-            
-                /* Se mantiene viva mientras la siguiente aparece */
-                3.3572% {
-                    opacity: 0;
-                }
-            
-                /* CORTE INVISIBLE: Se apaga de golpe por detrás */
-                100% {
-                    opacity: 0;
-                }
-         }
-    
-         /* Delays desktop (35 imágenes, nth-child empieza en 1 dentro de su grupo) */
-                 .slideshow-group--desktop .slideshow__img:nth-child(1) {
-                     animation-delay: 0s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(2) {
-                     animation-delay: 0.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(3) {
-                     animation-delay: 1s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(4) {
-                     animation-delay: 1.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(5) {
-                     animation-delay: 2s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(6) {
-                     animation-delay: 2.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(7) {
-                     animation-delay: 3s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(8) {
-                     animation-delay: 3.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(9) {
-                     animation-delay: 4s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(10) {
-                     animation-delay: 4.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(11) {
-                     animation-delay: 5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(12) {
-                     animation-delay: 5.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(13) {
-                     animation-delay: 6s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(14) {
-                     animation-delay: 6.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(15) {
-                     animation-delay: 7s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(16) {
-                     animation-delay: 7.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(17) {
-                     animation-delay: 8s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(18) {
-                     animation-delay: 8.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(19) {
-                     animation-delay: 9s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(20) {
-                     animation-delay: 9.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(21) {
-                     animation-delay: 10s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(22) {
-                     animation-delay: 10.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(23) {
-                     animation-delay: 11s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(24) {
-                     animation-delay: 11.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(25) {
-                     animation-delay: 12s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(26) {
-                     animation-delay: 12.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(27) {
-                     animation-delay: 13s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(28) {
-                     animation-delay: 13.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(29) {
-                     animation-delay: 14s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(30) {
-                     animation-delay: 14.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(31) {
-                     animation-delay: 15s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(32) {
-                     animation-delay: 15.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(33) {
-                     animation-delay: 16s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(34) {
-                     animation-delay: 16.5s;
-                 }
-        
-                 .slideshow-group--desktop .slideshow__img:nth-child(35) {
-                     animation-delay: 17s;
-                 }
-                 
- /* home */
+        text-decoration: none;
+    }
+
+    .header__list_item {
+        font-size: var(--text-size-header);
+        text-decoration: none;
+    }
+
+    .nav-toggle {
+        display: none;
+    }
+
+    .nav-overlay {
+        display: none;
+    }
+
+    :root {
+        --cycle-duration: 17.5s;
+    }
 
 
-    /* ABOUT */
-    /* Texto */
+    body.body_home footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.85);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+
+    body.body_home main {
+        padding-bottom: 80px;
+    }
+
+    body.body_home .slideshow-wrapper {
+        height: calc(100vh - 60px - 80px);
+
+        margin-top: 60px;
+    }
+
+
+    .slideshow-group--mobile {
+        display: none;
+    }
+
+    .slideshow-group--desktop {
+        display: block;
+    }
+
+    .slideshow-group--desktop .slideshow__img {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+
+        opacity: 0;
+
+        animation: fadeInOnlyDesktop var(--cycle-duration) linear infinite;
+    }
+
+
+
+    @keyframes fadeInOnlyDesktop {
+        0% {
+            opacity: 0;
+        }
+
+        0.5% {
+            opacity: 1;
+        }
+
+
+        3.3571% {
+            opacity: 1;
+        }
+
+
+        3.3572% {
+            opacity: 0;
+        }
+
+
+        100% {
+            opacity: 0;
+        }
+    }
+
+
+    .slideshow-group--desktop .slideshow__img:nth-child(1) {
+        animation-delay: 0s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(2) {
+        animation-delay: 0.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(3) {
+        animation-delay: 1s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(4) {
+        animation-delay: 1.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(5) {
+        animation-delay: 2s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(6) {
+        animation-delay: 2.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(7) {
+        animation-delay: 3s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(8) {
+        animation-delay: 3.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(9) {
+        animation-delay: 4s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(10) {
+        animation-delay: 4.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(11) {
+        animation-delay: 5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(12) {
+        animation-delay: 5.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(13) {
+        animation-delay: 6s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(14) {
+        animation-delay: 6.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(15) {
+        animation-delay: 7s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(16) {
+        animation-delay: 7.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(17) {
+        animation-delay: 8s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(18) {
+        animation-delay: 8.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(19) {
+        animation-delay: 9s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(20) {
+        animation-delay: 9.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(21) {
+        animation-delay: 10s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(22) {
+        animation-delay: 10.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(23) {
+        animation-delay: 11s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(24) {
+        animation-delay: 11.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(25) {
+        animation-delay: 12s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(26) {
+        animation-delay: 12.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(27) {
+        animation-delay: 13s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(28) {
+        animation-delay: 13.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(29) {
+        animation-delay: 14s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(30) {
+        animation-delay: 14.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(31) {
+        animation-delay: 15s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(32) {
+        animation-delay: 15.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(33) {
+        animation-delay: 16s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(34) {
+        animation-delay: 16.5s;
+    }
+
+    .slideshow-group--desktop .slideshow__img:nth-child(35) {
+        animation-delay: 17s;
+    }
+
+
+
+
+
+
     .about__section {
         grid-template-columns: 1fr 1.2fr;
     }
 
 
-    /* PROJECTS */
-        body.body_projects {
-            overflow: hidden;
-            height: 100vh;
-        }
 
-   /* En la página de proyectos, el header y footer necesitan position relative
-       para no interferir con el pin de GSAP — pero solo en esa página */
-   body.body_projects header,
-   body.body_projects footer {
-       width: 100%;
-       max-width: 100vw;
-       position: relative;
-       z-index: 10;
-       background-color: var(--clr-bg);
-   }
+    body.body_projects {
+        overflow: hidden;
+        height: 100vh;
+    }
+
+
+    body.body_projects header,
+    body.body_projects footer {
+        width: 100%;
+        max-width: 100vw;
+        position: relative;
+        z-index: 10;
+        background-color: var(--clr-bg);
+    }
 
     .main__projects {
         position: relative;
         display: block;
         width: 100%;
         overflow: visible;
-        /* Obligamos al main a ocupar toda la pantalla */
-        /* display: flex;
-            align-items: center; */
-        /* Centrado vertical */
-        /* justify-content: center; */
-        /* Centrado horizontal (opcional, pero ayuda) */
-        /* overflow: hidden;
-            position: relative; */
+
+
+
+
+
+
     }
 
     .sticky-container {
         width: 100%;
-        /* con height 100% consigo que quede centrado en la pantalla al hacerse el scroll */
+
         height: 100vh;
         display: flex;
         align-items: center;
-        /* CENTRADO VERTICAL */
+
         overflow: hidden;
     }
 
     .projects-track {
         flex-direction: row;
-        /* overflow-x: hidden; */
+
         flex-wrap: nowrap;
-        /* width: fit-content; */
+
         padding: 0 10vw;
         gap: 12vw;
     }
@@ -1454,7 +1511,7 @@ header.menu-simof .nav-toggle.is-active span {
         width: 30vh;
         min-width: 250px;
         flex-shrink: 0;
-        /* Evita que las tarjetas se aplasten */
+
         max-width: none;
         padding: 2rem, var(--padding-inline);
     }
@@ -1463,13 +1520,13 @@ header.menu-simof .nav-toggle.is-active span {
         position: relative;
         width: 100%;
         aspect-ratio: 1 / 1;
-        /* para permitir que el disco sobresalga */
+
         overflow: visible;
     }
 
     .project-cover {
         position: relative;
-        /* para ponerlo por encima del disco */
+
         z-index: 2;
         width: 100%;
         object-fit: cover;
@@ -1477,7 +1534,7 @@ header.menu-simof .nav-toggle.is-active span {
     }
 
     .project-disc {
-        /* activamos el disco en desktop */
+
         display: block;
         position: absolute;
         visibility: visible;
@@ -1485,7 +1542,7 @@ header.menu-simof .nav-toggle.is-active span {
         right: 0;
         width: 90%;
         height: 90%;
-        /* para ponerlo por debajo de la carátula */
+
         z-index: 1;
         transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
     }
@@ -1496,265 +1553,605 @@ header.menu-simof .nav-toggle.is-active span {
         transform-origin: center center;
     }
 
-    /* Efecto hover para abrir la carátula y que aparezca el disco */
+
     .project-card:hover .project-cover {
         transform: translateX(-30%);
         transform: rotate(-5deg);
-        
+
     }
 
     .project-card:hover .project-disc {
         transform: translateX(20%);
     }
 
-        @keyframes spin-center {
-            from {
-                    transform: rotate(0deg);
-                }
-            
-                to {
-                    transform: rotate(360deg);
-                }
-            }
-    
-        .project-card:hover .project-disc img {
-            /* Mantiene el desplazamiento y añade rotación infinita */
-            animation: spin-center 3s linear infinite;
-            animation-delay: 0.01s;
-            /* Espera a que termine de salir para empezar a girar */
-        }
-    
-        /* El main ocupa todo el espacio entre header y footer */
-        .main__projects {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            cursor: grab;
-        }
-    
-        .main__projects:active {
-            cursor: grabbing;
-        }
-    
-        /* El track: flex row, sin wrap, ancho automático */
-        .projects-track {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
-            align-items: center;
-            padding: 0;
-            gap: 12vw;
-            /* No usamos transform desde CSS — lo controla JS */
-            will-change: transform;
-            /* Evitamos que los clicks en las cards disparen el drag */
-            user-select: none;
-        }
-    
-        /* Damos margen extra al primer y último clone para que respiren */
-        .projects-track .project-card:first-child {
-            margin-left: 10vw;
-        }
-    
-        .projects-track .project-card:last-child {
-            margin-right: 10vw;
-        }
-    
-        /* El footer queda fijo abajo */
-        body.body_projects footer {
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            z-index: 100;
-            background-color: rgba(255, 255, 255, 0.92);
-            backdrop-filter: blur(6px);
-            -webkit-backdrop-filter: blur(6px);
-        }
-    
-        /* El header fijo arriba (sobreescribe la regla position:relative de body_projects) */
-        body.body_projects header {
-            position: fixed !important;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background-color: transparent;
+    @keyframes spin-center {
+        from {
+            transform: rotate(0deg);
         }
 
-    /* plantilla para proyectos con youtube + texto */
-        .projects__section {
-            grid-template-columns: 1.5fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            min-height: 70vh;
+        to {
+            transform: rotate(360deg);
         }
+    }
 
-        .projects__section_youtube {
-            max-width: 900px;
-        }
+    .project-card:hover .project-disc img {
 
-        /* Efecto de apilamiento: El texto se queda fijo y la galería sube */
-        .editorial{
-            overflow: visible !important;
-        }
-        
-        .editorial__intro {
-            position: sticky;
-            top: 0;
-            z-index: 1;
-        }
-    
-        .editorial__gallery {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            position: relative;
-            z-index: 2;
-            /* Para que pase por encima del texto */
-            background-color: var(--clr-bg);
-            /* Fondo sólido para tapar el texto */
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 2px;
-            padding: 4rem var(--padding-inline);
-        }
-    
-        .gallery__item {
-            padding-bottom: 1rem
-        }
-    
-        .gallery__item img {
-            width: 100%;
-            height: 500px;
-        }
+        animation: spin-center 3s linear infinite;
+        animation-delay: 0.01s;
 
-        .editorial__gallery-simof {
-            grid-template-columns: repeat(4, 2fr);
-            gap: 1.5rem;
-            padding: 4rem var(--padding-inline);
-            aspect-ratio: 3 / 4;
-        }
-            
-        /* Bloom */
-        .desktop-info-row {
-            display: grid;
-                grid-template-columns: 1fr 1fr;
-                /* El challenge ocupa más espacio que la info */
-                background-color: white;
-                /* Unificamos el fondo */
-            padding-bottom: var(--padding-inline);
-        }
-    
-        .project-content-wrapper__challenge {
-            padding-right: 5vw;
-            background-color: white;
-        }
+    }
 
-        
 
-            .project-content-wrapper__info {
-                    background-color: transparent;
-                    /* Quitamos el blanco para que se vea el crema del wrapper */
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-between;
-                    padding-top: var(--padding-inline);
-                    /* Alineamos el padding con el challenge */
-                }
-                
-                .project-content-wrapper__info {
-                               background-color: transparent;
-                               display: flex;
-                               flex-direction: row-reverse;
-                               justify-content: space-around;
-                               padding-top: var(--padding-inline);
-                               align-items: flex-start;
-                               gap: 2rem;
-                }
+    .main__projects {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+        cursor: grab;
+    }
 
-                .project-content-wrapper__info_first-line {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: flex-start;
-                }
-            
-        
-        .desktop-photos-row {
-            display: flex;
-            width: 100vw;
-        }
-    
-        .project-content-wrapper__grid-img {
-            flex: 1;
-            /* Cada bloque de 2 fotos ocupa la mitad del ancho */
-            width: 50vw;
-            max-height: none;
-            /* Dejamos que crezcan */
-        }
-    
-        /* Ajuste para que las fotos pequeñas respiren como en Figma */
-        .img-small {
-            width: 40%;
-            /* Un poco más pequeñas que en móvil */
-        }
+    .main__projects:active {
+        cursor: grabbing;
+    }
 
-        .img-small-2 {
-             width: 70%;
-             padding: 0;
-        }
 
-                .project-colors {
-                    height: 400px;
-                    /* Más alto en desktop para lucir la paleta */
-                }
+    .projects-track {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-items: center;
+        padding: 0;
+        gap: 12vw;
 
-    /* panar */
+        will-change: transform;
 
-        .desktop-photos-row-panar {
-            flex-direction: row;
-            /* Los 5 elementos se alinean en una sola fila */
-            justify-content: center;
-            gap: 1rem;
-            padding: 4rem 2rem;
-            background-color: white;
-        }
+        user-select: none;
+    }
 
-        .project-content-wrapper__grid-img-panar {
-                width: auto;
-                    flex: 1;
-                    /* Distribuye el espacio de forma equilibrada */
-                    background-color: white;
-                }
+
+    .projects-track .project-card:first-child {
+        margin-left: 10vw;
+    }
+
+    .projects-track .project-card:last-child {
+        margin-right: 10vw;
+    }
+
+
+    body.body_projects footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        background-color: rgba(255, 255, 255, 0.92);
+        backdrop-filter: blur(6px);
+        -webkit-backdrop-filter: blur(6px);
+    }
+
+
+    body.body_projects header {
+        position: fixed !important;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 1000;
+        background-color: transparent;
+    }
+
+
+    .projects__section {
+        grid-template-columns: 1.5fr 1fr;
+        gap: 4rem;
+        align-items: center;
+        min-height: 70vh;
+    }
+
+    .projects__section_youtube {
+        max-width: 900px;
+    }
+
+
+    .editorial {
+        overflow: visible !important;
+    }
+
+    .editorial__intro {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+
+    .editorial__gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        position: relative;
+        z-index: 2;
+
+        background-color: var(--clr-bg);
+
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2px;
+        padding: 4rem var(--padding-inline);
+    }
+
+    .gallery__item {
+        padding-bottom: 1rem
+    }
+
+    .gallery__item img {
+        width: 100%;
+        height: 500px;
+    }
+
+    .editorial__gallery-simof {
+        grid-template-columns: repeat(4, 2fr);
+        gap: 1.5rem;
+        padding: 4rem var(--padding-inline);
+        aspect-ratio: 3 / 4;
+    }
+
+
+    .desktop-info-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        background-color: white;
+
+        padding-bottom: var(--padding-inline);
+    }
+
+    .project-content-wrapper__challenge {
+        padding-right: 5vw;
+        background-color: white;
+    }
+
+
+
+    .project-content-wrapper__info {
+        background-color: transparent;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-top: var(--padding-inline);
+
+    }
+
+    .project-content-wrapper__info {
+        background-color: transparent;
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        padding-top: var(--padding-inline);
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .project-content-wrapper__info_first-line {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+
+    .desktop-photos-row {
+        display: flex;
+        width: 100vw;
+    }
+
+    .project-content-wrapper__grid-img {
+        flex: 1;
+
+        width: 50vw;
+        max-height: none;
+
+    }
+
+
+    .img-small {
+        width: 40%;
+
+    }
+
+    .img-small-2 {
+        width: 70%;
+        padding: 0;
+    }
+
+    .project-colors {
+        height: 400px;
+
+    }
+
+
+
+    .desktop-photos-row-panar {
+        flex-direction: row;
+
+        justify-content: center;
+        gap: 1rem;
+        padding: 4rem 2rem;
+        background-color: white;
+    }
+
+    .project-content-wrapper__grid-img-panar {
+        width: auto;
+        flex: 1;
+
+        background-color: white;
+    }
 
     .project-content-wrapper_video_desktop {
         max-width: 600px;
     }
 
-/* bloom */
-.project-content-wrapper_video-bloom {
-    top: 0;
-    height: 70vh;
+
+    .project-content-wrapper_video-bloom {
+        top: 0;
+        height: 70vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+    .project-content-wrapper_video-bloom iframe {
+        width: clamp(392px, 60vw, 840px);
+        height: clamp(147px, 50vh, 472.5px);
+        margin: 5vh;
+    }
+
+}
+
+
+/* =====================================================
+   LANGUAGE TOGGLE (footer)
+   ===================================================== */
+
+.footer__right {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.6rem;
+}
+
+.lang-toggle {
+    display: inline-flex;
     align-items: center;
+    justify-content: center;
+    background: none;
+    border: 1.5px solid var(--clr-text);
+    border-radius: 20px;
+    padding: 3px 12px;
+    font-family: var(--text-font);
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    cursor: pointer;
+    color: var(--clr-text);
+    transition: background 0.25s ease, color 0.25s ease;
+    text-transform: uppercase;
+}
+
+.lang-toggle:hover {
+    background: var(--clr-text);
+    color: var(--clr-bg);
+}
+
+.footer__icon-img {
+    height: 30px;
 }
 
 
+/* =====================================================
+   PROJECT NAVIGATION (prev / next)
+   ===================================================== */
 
-.project-content-wrapper_video-bloom iframe {
-    width: clamp(392px, 60vw, 840px);
-    height: clamp(147px, 50vh, 472.5px);
-    margin: 5vh;
+.project-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2.5rem var(--padding-inline);
+    border-top: 1px solid rgba(0, 0, 0, 0.08);
+    gap: 1rem;
+    background-color: white;
 }
 
+.project-nav__link {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    text-decoration: none;
+    font-family: var(--text-font);
+    font-size: clamp(0.75rem, 1.2vw, 0.9rem);
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--clr-text);
+    opacity: 0.55;
+    transition: opacity 0.3s ease, gap 0.3s ease;
 }
 
-            
+.project-nav__link:hover {
+    opacity: 1;
+    text-decoration: none;
+    gap: 1rem;
+}
+
+.project-nav__link--prev::before {
+    content: "←";
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.project-nav__link--next::after {
+    content: "→";
+    font-size: 1.1em;
+    transition: transform 0.3s ease;
+}
+
+.project-nav__link--prev:hover::before {
+    transform: translateX(-2px);
+}
+
+.project-nav__link--next:hover::after {
+    transform: translateX(2px);
+}
+
+
+.project-nav__link--empty {
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   MOBILE: Animación automática carátulas de proyectos
+   ===================================================== */
+
+/* Solo activo en móvil (< 768px) */
+@media (max-width: 767px) {
+
+    .projects-track--mobile-anim .card-media {
+        position: relative;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            overflow: visible;
+    }
+
+    .project-card--mobile-anim .project-cover {
+        position: relative;
+        z-index: 2;
+        width: 220px;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+        display: block;
+    }
+
+    @keyframes cardRevealMobile {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .project-disc--mobile {
+        display: block !important;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 85%;
+        height: 85%;
+        z-index: 1;
+        transform: translateX(0);
+        animation: discSlideMobile 1.2s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+        opacity: 0;
+    }
+
+    @keyframes discSlideMobile {
+        0% {
+            opacity: 0;
+            transform: translateX(0);
+        }
+
+        60% {
+            opacity: 1;
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateX(18%);
+        }
+    }
+
+    .project-disc--mobile img {
+        width: 100%;
+        object-fit: cover;
+        transform-origin: center center;
+        animation: spinMobile 4s linear infinite;
+        animation-play-state: paused;
+    }
+
+    /* El disco gira cuando su tarjeta es "activa" */
+    .project-card--mobile-anim.is-active .project-disc--mobile img {
+        animation-play-state: running;
+    }
+
+    .project-card--mobile-anim.is-active .project-cover {
+        transform: rotate(-5deg) translateX(-8%);
+        transition: transform 0.5s ease;
+    }
+
+    @keyframes spinMobile {
+        from {
+            transform: rotate(0deg);
+        }
+
+        to {
+            transform: rotate(360deg);
+        }
+    }
+
+        .project-card--mobile-anim:nth-child(1) {
+            animation-delay: 0.05s;
+        }
+    
+        .project-card--mobile-anim:nth-child(2) {
+            animation-delay: 0.15s;
+        }
+    
+        .project-card--mobile-anim:nth-child(3) {
+            animation-delay: 0.25s;
+        }
+    
+        .project-card--mobile-anim:nth-child(4) {
+            animation-delay: 0.35s;
+        }
+    
+        .project-card--mobile-anim:nth-child(5) {
+            animation-delay: 0.45s;
+        }
+    
+        .project-card--mobile-anim:nth-child(6) {
+            animation-delay: 0.55s;
+        }
+    
+        .project-card--mobile-anim:nth-child(7) {
+            animation-delay: 0.65s;
+        }
+    
+        .project-card--mobile-anim:nth-child(8) {
+            animation-delay: 0.75s;
+        }
+    
+        /* El disco sale un poco después que su tarjeta */
+        .project-card--mobile-anim:nth-child(1) .project-disc--mobile {
+            animation-delay: 0.4s;
+        }
+    
+        .project-card--mobile-anim:nth-child(2) .project-disc--mobile {
+            animation-delay: 0.5s;
+        }
+    
+        .project-card--mobile-anim:nth-child(3) .project-disc--mobile {
+            animation-delay: 0.6s;
+        }
+    
+        .project-card--mobile-anim:nth-child(4) .project-disc--mobile {
+            animation-delay: 0.7s;
+        }
+    
+        .project-card--mobile-anim:nth-child(5) .project-disc--mobile {
+            animation-delay: 0.8s;
+        }
+    
+        .project-card--mobile-anim:nth-child(6) .project-disc--mobile {
+            animation-delay: 0.9s;
+        }
+    
+        .project-card--mobile-anim:nth-child(7) .project-disc--mobile {
+            animation-delay: 1.0s;
+        }
+    
+        .project-card--mobile-anim:nth-child(8) .project-disc--mobile {
+            animation-delay: 1.1s;
+        }
+    }
 
 
 
+/* =====================================================
+   PÁGINAS DE ERROR 404 / 500
+   ===================================================== */
 
+.body-error {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: var(--clr-bg);
+}
+
+.error-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem var(--padding-inline);
+    text-align: center;
+    gap: 1.5rem;
+}
+
+.error-code {
+    font-family: var(--text-font);
+    font-size: clamp(5rem, 20vw, 14rem);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -0.04em;
+    color: var(--clr-text);
+    opacity: 0.06;
+    user-select: none;
+    position: absolute;
+}
+
+.error-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.error-title {
+    font-family: var(--text-font);
+    font-size: clamp(1.2rem, 3vw, 1.8rem);
+    font-weight: 700;
+    margin: 0;
+    color: var(--clr-text);
+}
+
+.error-subtitle {
+    font-family: var(--text-font-text);
+    font-size: clamp(0.9rem, 1.5vw, 1.1rem);
+    color: var(--clr-text-details);
+    margin: 0;
+    max-width: 400px;
+    line-height: 1.6;
+}
+
+.error-home-link {
+    margin-top: 1rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--text-font);
+    font-weight: 600;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    color: var(--clr-text);
+    border-bottom: 1.5px solid var(--clr-text);
+    padding-bottom: 2px;
+    transition: opacity 0.3s ease;
+}
+
+.error-home-link:hover {
+    opacity: 0.5;
+    text-decoration: none;
+}
+
+.error-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}

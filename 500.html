@@ -4,18 +4,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Gentil | Contact</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
-    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-
+    <title>500 — Something went wrong · María Gentil</title>
+    <meta name="robots" content="noindex, nofollow">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="/assets/icons/favicon.svg">
+    <script src="/script.js" defer></script>
 </head>
 
-<body>
+<body class="body-error">
     <header>
         <div class="header-index">
             <h1>
-                <a href="../index.html">
+                <a href="index.html">
                     <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.09 100.92">
                         <defs>
                             <style>
@@ -48,42 +51,35 @@
                 </a>
             </h1>
 
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+            <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+                <span></span><span></span><span></span>
             </button>
-
-
             <nav class="header__content">
                 <ul class="header__list">
-                    <li><a href="../projects/index.html" class="header__list_item">Projects</a></li>
-                    <li><a href="../about/index.html" class="header__list_item">About</a></li>
-                    <li><a href="../contact/index.html" class="header__list_item">Contact</a></li>
+                    <li><a href="/projects/index.html" class="header__list_item">Projects</a></li>
+                    <li><a href="/about/index.html" class="header__list_item">About</a></li>
+                    <li><a href="/contact/index.html" class="header__list_item">Contact</a></li>
                 </ul>
             </nav>
         </div>
-
-
         <nav class="nav-overlay" id="navOverlay">
             <ul class="nav-overlay__list">
-                <li><a href="../projects/index.html" class="nav-overlay__item">Projects</a></li>
-                <li><a href="../about/index.html" class="nav-overlay__item">About</a></li>
-                <li><a href="../contact/index.html" class="nav-overlay__item">Contact</a></li>
+                <li><a href="/projects/index.html" class="nav-overlay__item">Projects</a></li>
+                <li><a href="/about/index.html" class="nav-overlay__item">About</a></li>
+                <li><a href="/contact/index.html" class="nav-overlay__item">Contact</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="padding">
-        <div class="contact__main">
-            <p class="contact__main_link">
-                Interested? <br>Let’s <a href="mailto:maria.gentil.bueno@gmail.com"><strong>chat</strong></a>!
-            </p>
-            <p class="contact__main_form">
-
-            </p>
+    <main class="error-main" id="main-content">
+        <div class="error-wrapper">
+            <span class="error-code" aria-hidden="true">500</span>
+            <div class="error-content">
+                <p class="error-title">Something went wrong.</p>
+                <p class="error-subtitle">There's a server issue on our end. It's not you — it's us. Try refreshing the page or come back in a moment.</p>
+                <a href="/" class="error-home-link">← Back to home</a>
+            </div>
         </div>
-
     </main>
 
 <footer role="contentinfo">
@@ -109,7 +105,6 @@
         </div>
     </div>
 </footer>
-
 </body>
 
 </html>

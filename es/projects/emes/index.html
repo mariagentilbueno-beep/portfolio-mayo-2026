@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Gentil | Contact</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
-    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-
+    <title>Emes Agencia Creativa — María Gentil</title>
+    <meta name="description" content="Proyecto 360º que cubre el ciclo completo de un producto digital: identidad de marca, diseño editorial, prototipado interactivo y desarrollo web front-end.">
+    <link rel="stylesheet" href="../../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../../../assets/icons/favicon.svg">
+    <script src="../../../script.js" defer></script>
 </head>
-
-<body>
+<body class="page-emes">
     <header>
         <div class="header-index">
             <h1>
-                <a href="../index.html">
+                <a href="/es/" aria-label="María Gentil — inicio">
                     <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.09 100.92">
                         <defs>
                             <style>
@@ -47,43 +48,80 @@
                     </svg>
                 </a>
             </h1>
-
-            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-
-
+            <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false"><span></span><span></span><span></span></button>
             <nav class="header__content">
                 <ul class="header__list">
-                    <li><a href="../projects/index.html" class="header__list_item">Projects</a></li>
-                    <li><a href="../about/index.html" class="header__list_item">About</a></li>
-                    <li><a href="../contact/index.html" class="header__list_item">Contact</a></li>
+                    <li><a href="/es/projects/" class="header__list_item">Proyectos</a></li>
+                    <li><a href="/es/about/" class="header__list_item">Sobre mí</a></li>
+                    <li><a href="/es/contact/" class="header__list_item">Contacto</a></li>
                 </ul>
             </nav>
         </div>
-
-
         <nav class="nav-overlay" id="navOverlay">
             <ul class="nav-overlay__list">
-                <li><a href="../projects/index.html" class="nav-overlay__item">Projects</a></li>
-                <li><a href="../about/index.html" class="nav-overlay__item">About</a></li>
-                <li><a href="../contact/index.html" class="nav-overlay__item">Contact</a></li>
+                <li><a href="/es/projects/" class="nav-overlay__item">Proyectos</a></li>
+                <li><a href="/es/about/" class="nav-overlay__item">Sobre mí</a></li>
+                <li><a href="/es/contact/" class="nav-overlay__item">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
     <main id="padding">
-        <div class="contact__main">
-            <p class="contact__main_link">
-                Interested? <br>Let’s <a href="mailto:maria.gentil.bueno@gmail.com"><strong>chat</strong></a>!
-            </p>
-            <p class="contact__main_form">
-
-            </p>
+        <div class="hero_container">
+            <img src="../../../assets/img/img-emes-hero-mobile.webp" class="img-mobile img-hero reveal-img" alt="">
+            <img src="../../../assets/img/img-emes-hero-desktop.webp" class="img-desktop img-hero reveal-img" alt="">
         </div>
 
+        <div class="project-content-wrapper">
+            <div class="desktop-info-row">
+                <div class="project-content-wrapper__challenge bg-color-yellow-emes">
+                    <p class="strong">RESUMEN DEL PROYECTO</p>
+                    <p><i>Emes Agencia Creativa</i> es un proyecto integral <strong>360º</strong> concebido para tender un puente entre la estrategia visual y la funcionalidad técnica en el proceso de creación de una agencia creativa.<br><br>Desarrollado como proyecto final del Máster en Diseño Gráfico Digital y Desarrollo Web Front-End (UX/UI), <i>Emes</i> abarca el <strong>ciclo completo</strong> de un <strong>producto digital</strong>: desde la conceptualización de marca, el <i>naming</i> y el diseño editorial de su propia revista, hasta el prototipado interactivo y la programación de su plataforma web.<br><br>Este proyecto es la <strong>materialización</strong> de una <strong>visión clara</strong>: demostrar cómo el <strong>diseño</strong> estético y el <strong>código</strong> sólido pueden convivir para ayudar a las empresas a transformar su presencia digital con una imagen impecable y cohesionada.</p>
+                </div>
+                <div class="project-content-wrapper__info">
+                    <div class="project-content-wrapper__info_first-line">
+                        <div>
+                            <p class="strong">ROL</p>
+                            <p>Co-fundadora <br>Gestión digital del proyecto</p>
+                        </div>
+                        <div>
+                            <p class="strong">AÑO</p>
+                            <p>2026</p>
+                        </div>
+                    </div>
+                    <div>
+                        <p class="strong">COMPETENCIAS</p>
+                        <ul>
+                            <li>Diseño de Identidad Corporativa</li>
+                            <li>Estrategia de Marca</li>
+                            <li>Diseño de Interfaz y Experiencia de Usuario</li>
+                            <li>Desarrollo Web <i></i></li>
+                            <li>Diseño Editorial</li>
+                            <li>Prototipado Interactivo y <i>Wireframing</i></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid justify-content-center">
+            <div class="project-content-wrapper_video_desktop">
+                <video src="../../../assets/vid/vid-emes-web-desktop.mp4" autoplay loop muted playsinline preload="metadata" class="reveal-img"></video>
+            </div>
+            <div class="btn-wrapper bg-color-white">
+                <a href="https://emesagencia.es/index.html" class="btn a-emes" target="_blank"
+                    rel="noopener noreferrer">Visitar la web</a>
+            </div>
+        </div>
+
+        <nav class="project-nav" aria-label="Navegación entre proyectos">
+            <a href="/es/projects/emes/" class="project-nav__link project-nav__link--prev project-nav__link--empty">
+                <span class="project-nav__title">Vacío</span>
+            </a>
+            <a href="/es/projects/bloom/" class="project-nav__link project-nav__link--next">
+                <span class="project-nav__title">Bloom</span>
+            </a>
+        </nav>
     </main>
 
 <footer role="contentinfo">
@@ -109,7 +147,5 @@
         </div>
     </div>
 </footer>
-
 </body>
-
 </html>

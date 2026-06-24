@@ -1,21 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>María Gentil | Contact</title>
-    <link rel="stylesheet" href="../style.css">
-    <script src="../script.js" defer></script>
-    <link rel="icon" type="image/svg+xml" href="../assets/icons/favicon.svg">
-
+    <title>Sobre mí — María Gentil</title>
+    <meta name="description" content="Diseñadora multidisciplinar especializada en diseño gráfico, desarrollo web front-end UX/UI y comunicación audiovisual. Basada en España.">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
+    <script src="../../script.js" defer></script>
 </head>
-
 <body>
     <header>
         <div class="header-index">
             <h1>
-                <a href="../index.html">
+                <a href="/es/" aria-label="María Gentil — inicio">
                     <svg id="Capa_1" data-name="Capa 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 188.09 100.92">
                         <defs>
                             <style>
@@ -47,43 +48,35 @@
                     </svg>
                 </a>
             </h1>
-
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span></span><span></span><span></span>
             </button>
-
-
             <nav class="header__content">
                 <ul class="header__list">
-                    <li><a href="../projects/index.html" class="header__list_item">Projects</a></li>
-                    <li><a href="../about/index.html" class="header__list_item">About</a></li>
-                    <li><a href="../contact/index.html" class="header__list_item">Contact</a></li>
+                    <li><a href="/es/projects/" class="header__list_item">Proyectos</a></li>
+                    <li><a href="/es/about/" class="header__list_item">Sobre mí</a></li>
+                    <li><a href="/es/contact/" class="header__list_item">Contacto</a></li>
                 </ul>
             </nav>
         </div>
-
-
         <nav class="nav-overlay" id="navOverlay">
             <ul class="nav-overlay__list">
-                <li><a href="../projects/index.html" class="nav-overlay__item">Projects</a></li>
-                <li><a href="../about/index.html" class="nav-overlay__item">About</a></li>
-                <li><a href="../contact/index.html" class="nav-overlay__item">Contact</a></li>
+                <li><a href="/es/projects/" class="nav-overlay__item">Proyectos</a></li>
+                <li><a href="/es/about/" class="nav-overlay__item">Sobre mí</a></li>
+                <li><a href="/es/contact/" class="nav-overlay__item">Contacto</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="padding">
-        <div class="contact__main">
-            <p class="contact__main_link">
-                Interested? <br>Let’s <a href="mailto:maria.gentil.bueno@gmail.com"><strong>chat</strong></a>!
-            </p>
-            <p class="contact__main_form">
-
-            </p>
+    <main>
+        <div class="about__distribution">
+            <section class="about__section">
+                <img src="../../assets/img/img-about.webp" alt="Foto de María Gentil" class="about__section_img reveal-img">
+                <article class="about__section_article">
+                    <p>Soy una diseñadora multidisciplinar especializada en transformar <strong>ideas complejas</strong> en <strong>conceptos visuales</strong> coherentes y memorables.<br><br>Mi experiencia conecta el <strong>diseño gráfico</strong> con el <strong>desarrollo web</strong>, respaldada por una formación en <strong>comunicación audiovisual</strong>.<br><br>Me enfoco en crear <strong>estrategias visuales</strong> que utilizan la emoción para <strong>conectar</strong> a las audiencias con los valores de marca. Creo que la intersección entre creatividad y estrategia es la clave para construir identidades coherentes, sólidas y memorables.</p>
+                </article>
+            </section>
         </div>
-
     </main>
 
 <footer role="contentinfo">
@@ -109,7 +102,5 @@
         </div>
     </div>
 </footer>
-
 </body>
-
 </html>

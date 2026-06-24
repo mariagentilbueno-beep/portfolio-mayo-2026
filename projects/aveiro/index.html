@@ -1,16 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aveiro — María Gentil</title>
+    <meta name="description"
+        content="Editorial photography portfolio from Praia da Barra, Aveiro. A visual exploration of surf culture and coastal life during an Erasmus experience in Portugal.">
     <link rel="stylesheet" href="../../style.css">
-    <title>Projects - Aveiro - Editorial fotográfica</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@100..900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/svg" href="../../assets/icons/favicon.svg">
-    <script src="../../script.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <script src="../../script.js" defer></script>
+    <link rel="icon" type="image/svg+xml" href="../../assets/icons/favicon.svg">
 </head>
 
 <body class="page-simof">
@@ -49,14 +53,14 @@
                     </svg>
                 </a>
             </h1>
-            <!-- Botón hamburguesa: solo en móvil -->
+
             <button class="nav-toggle" id="navToggle" aria-label="Abrir menú" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </button>
 
-            <!-- Nav desktop: sin tocar -->
+
             <nav class="header__content">
                 <ul class="header__list">
                     <li><a href="../../projects/index.html" class="header__list_item">Projects</a></li>
@@ -66,7 +70,7 @@
             </nav>
         </div>
 
-        <!-- Overlay móvil: fuera del header-index pero dentro del header -->
+
         <nav class="nav-overlay" id="navOverlay">
             <ul class="nav-overlay__list">
                 <li><a href="../../projects/index.html" class="nav-overlay__item">Projects</a></li>
@@ -125,12 +129,8 @@
 
             <div class="desktop-photos-row">
                 <div class="project-content-wrapper__grid-img">
-                    <img src="" alt="">
-
-                    <div>
-                        <img src="../../assets/img/img-aveiro-1.webp" alt="" class="padding-inline reveal-img">
-                    </div>
-
+                    <div class="grid-spacer"></div>
+                    <img src="../../assets/img/img-aveiro-1.webp" alt="" class="reveal-img">
                 </div>
             </div>
 
@@ -141,11 +141,8 @@
 
             <div class="desktop-photos-row">
                 <div class="project-content-wrapper__grid-img">
-                    <img src="../../assets/img/img-aveiro-3.webp" alt="" class="padding-inline reveal-img">
-
-
-                    <img src="" alt="">
-
+                    <img src="../../assets/img/img-aveiro-3.webp" alt="" class="reveal-img">
+                    <div class="grid-spacer"></div>
                 </div>
             </div>
 
@@ -155,53 +152,51 @@
 
             <div class="desktop-photos-row">
                 <div class="project-content-wrapper__grid-img">
-                    <img src="" alt="">
-
-                    <div>
-                        <img src="../../assets/img/img-aveiro-5.webp" alt="" class="padding-inline reveal-img">
-                    </div>
-
+                    <div class="grid-spacer"></div>
+                    <img src="../../assets/img/img-aveiro-5.webp" alt="" class="reveal-img">
                 </div>
             </div>
             <div class="wrapper-photo-unique">
                 <img src="../../assets/img/img-aveiro-6.webp" alt="" class="photo-centered reveal-img">
             </div>
-
-
-
-
-
-
-
         </div>
+
+        <nav class="project-nav" aria-label="Project navigation">
+            <a href="../motel/index.html" class="project-nav__link project-nav__link--prev">
+                <span class="project-nav__title">Motel California</span>
+            </a>
+            <a href="../icaro/index.html" class="project-nav__link project-nav__link--next project-nav__link--empty">
+                <span class="project-nav__title">Empty</span>
+            </a>
+        </nav>
 
 
     </main>
 
-    <footer>
-        <div class="footer__email">
-            <a href="mailto:maria.gentil.bueno@gmail.com">
-                <span>Say hi!</span>
-            </a>
+    <footer role="contentinfo">
+        <div>
+            <button class="lang-toggle" id="langToggle" aria-label="Switch language">
+                <span class="lang-toggle__label" id="langLabel">ES</span>
+            </button>
         </div>
-
         <div class="footer__text">
-            <p>Concept thinker. <br> Creative maker.</p>
-            <p class="footer__text_copy">&copy María Gentil 2026</p>
+            <p>Concept thinker.<br> Creative maker.</p>
+            <p class="footer__text_copy">&copy; María Gentil 2026</p>
         </div>
-
-        <div class="footer__icons">
-            <a href="https://www.linkedin.com/in/mariagentil/" target="_blank" rel="noopener noreferrer">
-                <img src="../../assets/icons/icon-linkedin.svg" alt="Icono Linkedin" class="footer__icons">
-            </a>
-
-            <a href="https://www.instagram.com/bymerygentil?igsh=NXA0N252anNlNWxo&utm_source=qr" target="_blank"
-                rel="noopener noreferrer">
-                <img src="../../assets/icons/icon-instagram.svg" alt="Icono instagram" class="footer__icons">
-            </a>
-
+        <div class="footer__right">
+            <div class="footer__icons">
+                <a href="https://www.linkedin.com/in/mariagentil/" target="_blank" rel="noopener noreferrer"
+                    aria-label="LinkedIn">
+                    <img src="/assets/icons/icon-linkedin.svg" alt="LinkedIn" class="footer__icon-img">
+                </a>
+                <a href="https://www.instagram.com/bymerygentil?igsh=NXA0N252anNlNWxo&utm_source=qr" target="_blank"
+                    rel="noopener noreferrer" aria-label="Instagram">
+                    <img src="/assets/icons/icon-instagram.svg" alt="Instagram" class="footer__icon-img">
+                </a>
+            </div>
         </div>
     </footer>
+
 </body>
 
 </html>
